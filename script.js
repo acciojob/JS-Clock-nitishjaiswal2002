@@ -18,14 +18,6 @@ function setDate() {
   hourHand.style.transform = `rotate(${hoursDegrees}deg)`;
 }
 
-function initClock() {
-  setDate();
-  setTimeout(() => {
-    secondHand.style.transition = 'all 0.05s';
-    minHand.style.transition = 'all 0.05s';
-    hourHand.style.transition = 'all 0.05s cubic-bezier(0.1, 2.7, 0.58, 1)';
-  }, 100); // Adding a slight delay before applying the transition
-}
 
 setInterval(setDate, 1000);
 initClock(); // Call it once to set the initial position
